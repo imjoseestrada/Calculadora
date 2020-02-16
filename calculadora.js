@@ -6,5 +6,9 @@ function formarExpresion(char){
 
 function calcular(){
     var resultado = eval(document.frmCalc.pantalla.value);
-    document.frmCalc.pantalla.value = resultado;
+    document.frmCalc.pantalla.value = Math.fround(resultado);
+}
+
+function limpiar(){
+    document.frmCalc.pantalla.value = null;
 }
