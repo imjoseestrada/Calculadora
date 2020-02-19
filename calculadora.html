@@ -2,38 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="calculadora.css">
-    <script src="calculadora.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+    <script src="calculadora.js" defer></script>
 </head>
 <body>
-    <div id="contenedor">
+    <div id="calculadora">
         <form action="" name="frmCalc">
-            <input type="text" name="pantalla" id="pantalla">
-            <div class="boton" name="ac" onclick="limpiar()">AC</div>
-            <div class="boton" onclick="formarExpresion('8')">+/-</div>
-            <div class="boton" onclick="formarExpresion('9')">%</div>
-            <div class="boton" onclick="formarExpresion('/')">÷</div>
-
-            <div class="boton" onclick="formarExpresion('7')">7</div>
-            <div class="boton" onclick="formarExpresion('8')">8</div>
-            <div class="boton" onclick="formarExpresion('9')">9</div>
-            <div class="boton" onclick="formarExpresion('*')">×</div>
-
-            <div class="boton" onclick="formarExpresion('4')">4</div>
-            <div class="boton" onclick="formarExpresion('5')">5</div>
-            <div class="boton" onclick="formarExpresion('6')">6</div>
-            <div class="boton" onclick="formarExpresion('-')">-</div>
-
-            <div class="boton" onclick="formarExpresion('1')">1</div>
-            <div class="boton" onclick="formarExpresion('2')">2</div>
-            <div class="boton" onclick="formarExpresion('3')">3</div>
-            <div class="boton" onclick="formarExpresion('+')">+</div>
-
-            <div class="boton0" onclick="formarExpresion('0')">0</div>
-            <div class="boton" onclick="formarExpresion('.')">.</div>
-            <div class="boton" onclick="calcular()">=</div>
+            <div class="pantalla">
+                <div data-operacion-anterior class="operacionAnterior"></div>
+                <div data-operacion-actual class="operacionActual"></div>
+            </div>
+            <div class="botones">
+                <div data-limpiar>AC</div>
+                <div data-eliminar>DEL</div>
+                <div>+/-</div>
+                <div data-operador>÷</div>
+    
+                <div data-numero>7</div>
+                <div data-numero>8</div>
+                <div data-numero>9</div>
+                <div data-operador>×</div>
+    
+                <div data-numero>4</div>
+                <div data-numero>5</div>
+                <div data-numero>6</div>
+                <div data-operador>-</div>
+    
+                <div data-numero>1</div>
+                <div data-numero>2</div>
+                <div data-numero>3</div>
+                <div data-operador>+</div>
+    
+                <div data-numero id="doble">0</div>
+                <div data-numero>.</div>
+                <div data-igual>=</div>
+            </div>
         </form>
     </div>
 </body>

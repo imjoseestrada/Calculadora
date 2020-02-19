@@ -1,34 +1,53 @@
 @import url('https://fonts.googleapis.com/css?family=DM+Sans&display=swap');
 
 body {
-    background-color: black;
+    background: linear-gradient(to right, royalblue, darkblue);
     font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
 }
 
-#contenedor {
+#calculadora {
     max-width: 176px;
-    height: 275px;
+    height: 310px;
     margin: auto;
     background-color: gray;
-    border: 5px solid white;
+    border: 5px solid whitesmoke;
     padding: 15px 10px;
     border-radius: 20px;
 }
 
-#pantalla {
+.pantalla {
+    align-items: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1px 5px;
+
+    word-wrap: break-word;
+    word-break: break-all;
+  
     width: 158px;
-    height: 40px;
-    padding: 1px 5px 1px 5px;
-    border: 2px;
-    border-radius: 25px;
-    border-style: inset;
+    height: 75px;
+    border: 2px inset;
+    border-radius: 10px;
     font-family: 'DM Sans', sans-serif;
     text-align: right;
-    font-size: 30px;
     margin-bottom: 10px;
+    background-color: white;
 }
 
-.boton, .boton0 {
+.pantalla .operacionAnterior {
+    color: rgba(0, 0, 0, 75%);
+    font-size: 1.5rem;
+    height: 1.5rem;
+}
+
+.pantalla .operacionActual {
+    color: black;
+    font-size: 2.5rem;
+    height: 2.5rem;
+}
+
+.botones div {
     width: 34px;
     text-align: center;
     color: white;
@@ -39,18 +58,25 @@ body {
     float: left;
     margin: 2px;
     background: rgba(0, 0, 0, 75%);
+    cursor: pointer;
+    outline: none;
 }
 
-.boton0 {
+#doble {
     width: 78px;
     border-radius: 25px;
 }
 
-.boton::selection, .boton0::selection{
+.botones div::selection{
     background: rgba(1, 1, 1, 0%);
 }
 
-.boton:active, .boton0:active {
+.botones div:active {
     border-style: inset;
     background-color: rgba(0, 0, 0, 50%);
+}
+
+.botones div:hover {
+    border-style: inset;
+    background-color: rgba(0, 0, 0, 90%);
 }
