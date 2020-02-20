@@ -86,8 +86,9 @@ class Calculadora {
 const btnNumero = document.querySelectorAll('[data-numero]')
 const btnOperador = document.querySelectorAll('[data-operador]')
 const btnIgual = document.querySelector('[data-igual]')
-const btnEliminar = document.querySelector('[data-eliminar]')
+const btnEliminar = document.querySelector('[data-eliminar-ultimo]')
 const btnLimpiar = document.querySelector('[data-limpiar]');
+const btnInvertir = document.querySelector('[data-invertir]')
 const operacionAnteriorElementoTexto = document.querySelector('[data-operacion-anterior]')
 const operacionActualElementoTexto = document.querySelector('[data-operacion-actual]')
 
